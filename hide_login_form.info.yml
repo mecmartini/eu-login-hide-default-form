@@ -1,0 +1,7 @@
+name: 'Hide login form'
+type: module
+description: 'Hide login form.'
+core: 8.x
+package: 'Custom'
+dependencies:
+  - user

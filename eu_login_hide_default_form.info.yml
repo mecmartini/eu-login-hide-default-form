@@ -1,0 +1,7 @@
+name: 'EU Login - Hide default form'
+type: module
+description: 'Hide drupal default login form and render a styled EU Login button.'
+core: 8.x
+package: 'Custom'
+dependencies:
+  - user

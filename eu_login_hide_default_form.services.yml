@@ -1,0 +1,5 @@
+services:
+  eu_login_hide_default_form.route_subscriber:
+    class: Drupal\eu_login_hide_default_form\Routing\RouteSubscriber
+    tags:
+      - { name: event_subscriber }

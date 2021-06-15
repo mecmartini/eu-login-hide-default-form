@@ -1,0 +1,30 @@
+<?php
+
+/**
+ * @file
+ * Contains eu_login_hide_default_form.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function eu_login_hide_default_form_form_user_login_form_alter(&$form, FormStateInterface &$form_state, $form_id) {
+  // Hide all form fields except for EU Login
+  $form['name']['#access'] = FALSE;
+  $form['pass']['#access'] = FALSE;
+  $form['actions']['#access'] = FALSE;
+  $form['captcha']['#access'] = FALSE;
+
+  // Add field for EU image
+  $form['eu_image'] = [
+    '#markup' => '<div class="eu-login-image"></div>',
+    '#weight' => -100,
+  ];
+
+  // Add css library to style EU Login button
+  $form['#attached']['library'][] = 'eu_login_hide_default_form/user_login_form';
+
+}

@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\hide_login_form\Routing;
+namespace Drupal\eu_login_hide_default_form\Routing;
 
 use Drupal\Core\Routing\RouteSubscriberBase;
 use Symfony\Component\Routing\RouteCollection;
